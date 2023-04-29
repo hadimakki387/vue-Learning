@@ -11,8 +11,7 @@ export default {
             <span>({{assignments.length}})</span>
             </h2>
             <AssignmentTags
-              v-model:currentTag="currentTag" //his is where the data is being synced on the main side
-              //fina nsammiha lli badna ye v-model:name="...", w mnistilima honik 3a hal 2ases
+              v-model:currentTag="currentTag" 
               :initTags="assignments.map(a=>a.tag)"
             />
             <ul 
@@ -27,7 +26,8 @@ export default {
             </ul>
         </section> 
     `,
-
+//in the assignment component this is where the data is being synced on the main side
+//fina nsammiha lli badna ye v-model:name="...", w mnistilima honik 3a hal 2ases
   props: {
     assignments: Array,
     title: String,
